@@ -20,7 +20,7 @@ const appRoutes: Routes = [
   {
     path: 'servers',
     // canActivate:[AuthGuard],
-    canActivateChild:[AuthGuard],
+    canActivateChild: [AuthGuard],
     component: ServersComponent,
     children: [
       { path: ':id', component: ServerComponent },
@@ -33,6 +33,6 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports:[RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
